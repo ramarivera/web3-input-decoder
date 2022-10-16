@@ -661,11 +661,12 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [extras]
 hashing-backend-pycryptodome = ["pycryptodome"]
 hashing-backend-pysha3 = ["pysha3"]
+hashing-backends = ["pysha3", "pycryptodome"]
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "5545f4119f2ef795b9952900be6f86a96dd63b4d1747a19c72ba106fd2b82d80"
+content-hash = "95def7ecbff14eb24e882a9a1833433eb1b40ba680279ea0c7b881f6d319add1"
 
 [metadata.files]
 appnope = [

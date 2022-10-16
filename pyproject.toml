@@ -37,7 +37,7 @@ pycryptodome = { version = "^3.15", optional = true }
 [tool.poetry.extras]
 hashing-backend-pysha3 = ["pysha3"]
 hashing-backend-pycryptodome = ["pycryptodome"]
-
+hashing_backends = ["pysha3", "pycryptodome"]
 
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
