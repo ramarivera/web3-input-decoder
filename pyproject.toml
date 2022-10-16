@@ -27,6 +27,18 @@ python = "^3.7"
 eth-abi = "^3.0.0"
 eth-utils = "^2.0.0"
 
+
+# eth-utils depends on eth-hash, which has two different backends as per:
+# https://eth-hash.readthedocs.io/en/latest/quickstart.html#quickstart, so
+# we lift the selection of backend to the consumers of web3-input-decoder
+pysha3 = { version = "1.0.2", optional = true }
+pycryptodome = { version = "^3.15", optional = true }
+
+[tool.poetry.extras]
+hashing-backend-pysha3 = ["pysha3"]
+hashing-backend-pycryptodome = ["pycryptodome"]
+
+
 [tool.poetry.dev-dependencies]
 black = "^22.6.0"
 flake8 = "^5.0.4"
